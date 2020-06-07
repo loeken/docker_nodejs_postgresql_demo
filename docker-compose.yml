@@ -1,0 +1,18 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD="topsecure"
+    volumes:
+      - /home/loeken/docker/postgresql/docker_postgresql_nodejs:/var/lib/postgresql/data
+  docker_nodejs_postgresql_demo:
+    image: node
+    depends_on:
+      - postgresql
+    volumes: 
+      - /home/loeken/Projects/docker_nodejs_postgresql_demo:/usr/src/app
+    working_dir: /usr/src/app
+    command: "bash -c 'node /usr/src/app/index.js'"
