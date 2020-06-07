@@ -1,6 +1,6 @@
 const pg = require('pg');
 
-const cs = 'postgres://postgres:topsecure@172.18.0.2:5432/api';
+const cs = 'postgres://postgres:topsecure@postgresql:5432/api';
 
 const client = new pg.Client(cs);
 client.connect();
