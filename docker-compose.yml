@@ -6,6 +6,7 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_PASSWORD="topsecure"
+      - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - /home/loeken/Projects/docker_nodejs_postgresql_demo/postgresql_data:/var/lib/postgresql/data
   docker_nodejs_postgresql_demo:
