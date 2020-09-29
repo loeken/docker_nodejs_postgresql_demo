@@ -7,7 +7,7 @@ services:
     environment:
       - POSTGRES_PASSWORD="topsecure"
     volumes:
-      - /home/loeken/docker/postgresql/docker_postgresql_nodejs:/var/lib/postgresql/data
+      - /home/loeken/Projects/docker_nodejs_postgresql_demo/postgresql_data:/var/lib/postgresql/data
   docker_nodejs_postgresql_demo:
     image: localhost:5000/docker_nodejs_postgresql_demo
     depends_on:
